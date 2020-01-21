@@ -1,0 +1,104 @@
+h1, h2 {
+  font-weight: 100;
+}
+
+.text-white {
+  color: #fff;
+}
+.btn {
+  color :black;
+  border-radius:10px;
+  padding: 20px 25px;
+}
+.new {
+  font-size :20px;
+  background-color : #55acee;
+  position:relative;
+  top:100px;
+  right:40px;
+  box-shadow:0px 5px blue;
+}
+
+.new:active{
+  position:relative;
+  top:110px;
+  box-shadow :none;
+}
+
+.login {
+  font-size :20px;
+  background-color : yellow;
+  position:relative;
+  top:100px;
+  left:40px;
+  box-shadow:0px 5px white;
+}
+
+.login:active{
+  position:relative;
+  top:110px;
+  box-shadow :none;
+}
+.top-hero-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('ホーム画像');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
+
+.top-hero-container {
+  padding-top: 220px;
+  h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-bottom: 60px;
+  }
+}
+
+.form-control {
+  height: 45px;
+}
+
+.users-new-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('ホーム画像');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+
+  .users-new-container {
+    padding-top: 220px;
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.push-create{
+  padding: 10px 20px;
+  font-size :20px;
+  background-color : #55acee;
+  box-shadow:0px 5px blue;
+}
+
+.push-create:active{
+  box-shadow :none;
+}
+
+.alert {
+  margin-bottom: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+}
