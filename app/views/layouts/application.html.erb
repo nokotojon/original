@@ -22,17 +22,22 @@
           <% if logged_in? %>
             <li>
               <%= link_to "#" do %>
-                <%= image_tag "icons/heart.png" %>
+                <%= image_tag "icons/スライドショー" %>
               <% end %>
             </li>
             <li>
               <%= link_to "#" do %>
-                <%= image_tag "icons/camera.png" %>
+                <%= image_tag "icons/ハート" %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %>
+                <%= image_tag "icons/投稿" %>
               <% end %>
             </li>
             <li>
               <%= link_to logout_path, method: :delete do %>
-                <%= image_tag "icons/logout.png" %>
+                <%= image_tag "icons/ログアウト" %>
               <% end %>
             </li>
           <% else %>
