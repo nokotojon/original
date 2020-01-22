@@ -1,0 +1,20 @@
+<div class="topic-index-wrapper">
+  <div class="container">
+    <% @songs.each do |topic| %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="topic-index-single">
+            <h2 class="topic-author">
+              <%= topic.user.name %>
+            </h2>
+            <%= video_tag topic.video_url.to_s,loop: true, controls: true, width: 550, id: "mv" %>
+
+            <p class="topic-text">
+              <%= topic.title %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
