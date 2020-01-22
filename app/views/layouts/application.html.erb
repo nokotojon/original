@@ -21,8 +21,13 @@
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
             <li>
-              <%= link_to "#" do %>
+              <%= link_to songs_path do %>
                 <%= image_tag "icons/スライドショー" %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to users_path do %>
+                <%= image_tag "icons/アカウント一覧" %>
               <% end %>
             </li>
             <li>

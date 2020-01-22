@@ -2,6 +2,9 @@ h1, h2 {
   font-weight: 100;
 }
 
+h2 {
+    margin-bottom: 60px;
+  }
 .text-white {
   color: #fff;
 }
@@ -57,9 +60,6 @@ h1, h2 {
     margin-bottom: 20px;
   }
 
-  h2 {
-    margin-bottom: 60px;
-  }
 }
 
 .form-control {
@@ -84,8 +84,9 @@ h1, h2 {
     }
   }
 }
-
+/* アカウント作成ページのボタン */
 .push-create{
+  position:relative;
   padding: 10px 20px;
   font-size :20px;
   background-color : #55acee;
@@ -93,9 +94,24 @@ h1, h2 {
 }
 
 .push-create:active{
+  position:relative;
+  top:10px;
   box-shadow :none;
 }
-
+/*終わり */
+/* ログインページのボタン */
+.real-login{
+  padding: 10px 20px;
+  font-size :20px;
+  background-color : yellow;
+  box-shadow:0px 5px white;
+}
+.real-login:active{
+  position:relative;
+  top:10px;
+  box-shadow :none;
+}
+/*終わり */
 .alert {
   margin-bottom: 0px;
   position: fixed;
@@ -132,13 +148,33 @@ h1, h2 {
     color: #565656;
   }
 }
-
+/*動画投稿画面*/
 .topic-new-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('動画投稿画面');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
   padding-top: 120px;
 }
 
+.add-video{
+  padding: 10px 20px;
+  font-size :20px;
+  background-color : #00FF00;
+  box-shadow:0px 5px green;
+}
+
+.add-video:active{
+  position:relative;
+  top:10px;
+  box-shadow :none;
+}
+/*ユーザー一覧 */
 .topic-index-wrapper {
-  padding-top: 70px;
   background-color: #fafafa;
   .topic-index-single {
     background-color: #fff;
@@ -168,5 +204,10 @@ h1, h2 {
       height: 30px;
       margin-left: 20px;
     }
+  }
+}
+.topic-index-wrapper{
+  .user-infomation{
+    text-align :center;
   }
 }
