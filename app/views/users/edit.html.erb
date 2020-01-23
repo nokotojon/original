@@ -1,0 +1,29 @@
+<div class="main users-edit">
+  <div class="container">
+    <div class="form-heading">アカウント編集</div>
+    <div class="form users-form">
+      <div class="form-body">
+        
+        <% @user.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+        
+        <!-- フォームの送信先を指定してください -->
+        <%= form_for @user, method: :put do |f| %>
+          <div class="form-group">
+            
+            <%= f.label :name, "名前", class: 'text-white' %>
+            <%= f.text_field :name, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :email,"メールアドレス", class: 'text-white' %>
+            <%= f.text_field :email, class: 'form-control' %>
+          </div>
+          <%= f.submit "編集", class: 'btn-block btn-white btn push-create' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
