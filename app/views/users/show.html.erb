@@ -2,6 +2,9 @@
   <div class="container">
     <div class ="low">
       <h1 class ="text-center text-white">ユーザー情報</h1>
+      <% if @user.image? %>
+    <%= image_tag @user.image.url %>
+   <% end %>
       <h2 class="user-infomation"><%= @user.name %></h2>
       
       <p class="user-infomation"><%= @user.email %></p>

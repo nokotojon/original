@@ -21,6 +21,7 @@
             <%= f.label :email,"メールアドレス", class: 'text-white' %>
             <%= f.text_field :email, class: 'form-control' %>
           </div>
+          <%= f.label "画像をアップロード" %><br><%= f.file_field :image %>
           <%= f.submit "編集", class: 'btn-block btn-white btn push-create' %>
         <% end %>
       </div>

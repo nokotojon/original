@@ -7,6 +7,9 @@
         <div class="topic-index-single">
           <h2 class="topic-author">
             <div class="user-right">
+              <% if user.image? %>
+                <%= image_tag user.image.url %>
+               <% end %>
             <%= link_to user.name, user %>
             </div>
           </h2>
