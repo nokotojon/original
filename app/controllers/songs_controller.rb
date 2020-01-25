@@ -1,6 +1,7 @@
 class SongsController < ApplicationController
   def index
-    @songs = Song.all
+    @songs = Song.all.includes(:favorite_users)
+    @songs = Song.all.order(created_at: :desc)
   end
   
   def new

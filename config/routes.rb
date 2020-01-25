@@ -10,4 +10,9 @@ Rails.application.routes.draw do
   put "users/:id/update" => "users#update"
     resources :users
     resources :songs
+    
+    get 'favorites/index'
+    post '/favorites', to: 'favorites#create'
+    delete '/favorites', to: 'favorites#destroy'
+    
 end

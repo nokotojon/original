@@ -1,0 +1,19 @@
+<div class="topic-index-wrapper">
+  <div class="container">
+    <% @favorite_songs.each do |song| %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="topic-index-single">
+            <h2 class="topic-author">
+              <%= song.user.name %>
+            </h2>
+             <%= video_tag song.video_url.to_s,loop: true, controls: true, width: 550, id: "mv" %>
+            <p class="topic-text">
+              <%= song.title %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

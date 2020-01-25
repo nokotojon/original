@@ -8,5 +8,7 @@ class User < ApplicationRecord
   has_secure_password
   
   has_many :songs
+  has_many :favorites
+  has_many :favorite_songs, through: :favorites, source: 'song'
   mount_uploader :image, ImageUploader
 end

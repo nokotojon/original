@@ -21,6 +21,19 @@
               <%= song.lyric %>
             </h4>
             <%= video_tag song.video_url.to_s,loop: true, controls: true, width: 550, id: "mv" %>
+            <div>
+              <% if !song.favorite_users.include?(current_user) %>
+                <%= link_to favorites_path(song_id: song.id),method: :post do %>
+                  <%= image_tag "icons/黒ハート.jpg", class: 'topic-index-icon' %>
+                  <%= song.favorite_users.count %>
+                <% end %>
+                <% else %>
+                  <%= link_to favorites_path(song_id: song.id),method: :delete do %>
+                  <%= image_tag "icons/赤のハート.jpeg", class: 'topic-index-icon' %>
+                  <%= song.favorite_users.count %>
+                <% end %>
+              <% end %>  
+            </div>
           </div>
         </div>
       </div>
