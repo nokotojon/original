@@ -207,12 +207,31 @@ h2 {
   }
 }
 .topic-index-wrapper{
-  .user-infomation{
     text-align :center;
-  }
 }
 
 .main {
   position:relative;
   top :100px;
 }
+
+.image-system{
+  float: left;
+
+  width:120px;
+  height:120px;
+}
+
+.user-right {
+  position: relative;
+  top : 20px;
+  float :center;
+}
+
+.image-systemm{
+  float: center;
+
+  width:120px;
+  height:120px;
+}
+
