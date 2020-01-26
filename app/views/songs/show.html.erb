@@ -10,7 +10,24 @@
                   <%= image_tag song.user.image.url %>
                  <% end %>
                  </div>
-            
+                 
+                <% if i == 1 %>
+                  <div class ="one">
+                   <%= "#{i}位" %>
+                   </div>
+                <% end %>
+                <% if i == 2 %>
+                 <div class ="two">
+                   <%= "#{i}位" %>
+                   </div>  
+                <% end %>
+                <% if i == 3 %>
+                 <div class ="three">
+                   <%= "#{i}位" %>
+                   </div>
+                <% end %>
+
+                 
             <h2 class="topic-author">
               <%= song.user.name %>
             </h2>

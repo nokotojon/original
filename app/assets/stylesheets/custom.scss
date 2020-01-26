@@ -244,3 +244,28 @@ h2 {
   position:relative;
    top : 80px;
 }
+
+.one {
+  font-size:100px;
+	text-align:center;
+	line-height:0.95em;
+	font-weight:bold;
+	color: transparent;
+	background: repeating-linear-gradient(0deg, #B67B03 0.1em, #DAAF08 0.2em, #FEE9A0 0.3em, #DAAF08 0.4em, #B67B03 0.5em); 
+	-webkit-background-clip: text;
+}
+
+.two {
+  font-size:100px;
+	text-align:center;
+	line-height:0.95em;
+	font-weight:bold;
+	color: transparent;
+	background: repeating-linear-gradient(0deg, #757575 0.1em, #9E9E9E 0.2em, #E8E8E8 0.3em, #9E9E9E 0.4em, #757575 0.5em); 
+	-webkit-background-clip: text;
+}
+
+.three{
+  font-size:100px;
+ color:#C47022;
+}

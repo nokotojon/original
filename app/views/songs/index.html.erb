@@ -17,10 +17,10 @@
               <%= song.title %>
             </h3>
             
+            <%= video_tag song.video_url.to_s,loop: true, controls: true, width: 550, id: "mv" %>
             <h4 class="topic-text">
               <%= song.lyric %>
             </h4>
-            <%= video_tag song.video_url.to_s,loop: true, controls: true, width: 550, id: "mv" %>
             <div>
               <% if !song.favorite_users.include?(current_user) %>
                 <%= link_to favorites_path(song_id: song.id),method: :post do %>
