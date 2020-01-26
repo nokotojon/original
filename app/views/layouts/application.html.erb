@@ -26,6 +26,16 @@
               <% end %>
             </li>
             <li>
+              <%= link_to 'songs/show' do %>
+                <%= image_tag "icons/ランキング.jpeg" %>
+              <% end %>
+            </li>
+             <li>
+              <%= link_to new_song_path do %>
+                <%= image_tag "icons/投稿.jpeg" %>
+              <% end %>
+            </li>
+            <li>
               <%= link_to users_path do %>
                 <%= image_tag "icons/アカウント一覧.jpeg" %>
               <% end %>
@@ -35,16 +45,14 @@
                 <%= image_tag "icons/ハート.jpeg" %>
               <% end %>
             </li>
-            <li>
-              <%= link_to new_song_path do %>
-                <%= image_tag "icons/投稿.jpeg" %>
-              <% end %>
-            </li>
+
             <li>
               <%= link_to logout_path, method: :delete do %>
                 <%= image_tag "icons/ログアウト.jpeg" %>
               <% end %>
             </li>
+            
+
           <% else %>
             <li>
               <%= link_to new_user_path do %>

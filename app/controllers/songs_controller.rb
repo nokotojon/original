@@ -2,6 +2,11 @@ class SongsController < ApplicationController
   def index
     @songs = Song.all.includes(:favorite_users)
     @songs = Song.all.order(created_at: :desc)
+
+  end
+  
+  def show
+    @all_ranks = Song.find(Favorite.group(:song_id).order('count(song_id) desc').limit(3).pluck(:song_id))
   end
   
   def new
