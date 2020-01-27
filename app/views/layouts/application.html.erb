@@ -16,39 +16,39 @@
    <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
       <div class="container">
         <%= link_to root_path do %>
-          <span><%= image_tag "icons/マイクの無料アイコンその24.jpeg", class: "navbar-brand" %></span>
+          <span><%= image_tag "icons/MIC.jpeg", class: "navbar-brand" %></span>
         <% end %>
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
             <li>
               <%= link_to songs_path do %>
-                <%= image_tag "icons/スライドショー.jpeg" %>
+                <%= image_tag "icons/video.jpeg" %>
               <% end %>
             </li>
             <li>
               <%= link_to 'songs/show' do %>
-                <%= image_tag "icons/ランキング.jpeg" %>
+                <%= image_tag "icons/rank.jpeg" %>
               <% end %>
             </li>
              <li>
               <%= link_to new_song_path do %>
-                <%= image_tag "icons/投稿.jpeg" %>
+                <%= image_tag "icons/submit.jpeg" %>
               <% end %>
             </li>
             <li>
               <%= link_to users_path do %>
-                <%= image_tag "icons/アカウント一覧.jpeg" %>
+                <%= image_tag "icons/members.jpeg" %>
               <% end %>
             </li>
             <li>
               <%= link_to favorites_index_path do %>
-                <%= image_tag "icons/ハート.jpeg" %>
+                <%= image_tag "icons/hert.jpeg" %>
               <% end %>
             </li>
 
             <li>
               <%= link_to logout_path, method: :delete do %>
-                <%= image_tag "icons/ログアウト.jpeg" %>
+                <%= image_tag "icons/logout.jpeg" %>
               <% end %>
             </li>
             
@@ -56,12 +56,12 @@
           <% else %>
             <li>
               <%= link_to new_user_path do %>
-                <%= image_tag "icons/登録のピクトアイコン1.jpeg" %>
+                <%= image_tag "icons/newacount.jpeg" %>
               <% end %>
             </li>
             <li>
               <%= link_to login_path do %>
-                <%= image_tag "icons/ログインアイコン3.jpeg" %>
+                <%= image_tag "icons/login.jpeg" %>
               <% end %>
             </li>
           <% end %>
