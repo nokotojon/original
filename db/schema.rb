@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 2020_01_25_002711) do
   create_table "songs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
     t.string "title"
-    t.string "lyric"
     t.string "video"
+    t.string "lyrics"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -31,10 +31,10 @@ ActiveRecord::Schema.define(version: 2020_01_25_002711) do
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "email"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
-    t.string "image"
   end
 
 end

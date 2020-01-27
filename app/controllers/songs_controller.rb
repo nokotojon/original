@@ -5,7 +5,7 @@ class SongsController < ApplicationController
 
   end
   
-  def show
+  def rank
     @all_ranks = Song.find(Favorite.group(:song_id).order('count(song_id) desc').limit(3).pluck(:song_id))
   end
   

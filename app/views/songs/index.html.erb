@@ -1,6 +1,7 @@
 <div class="topic-index-wrapper">
   <div class="container">
     <% @songs.each do |song| %>
+
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <div class="topic-index-single">
@@ -18,8 +19,8 @@
             </h3>
             
             <%= video_tag song.video_url.to_s,loop: true, controls: true, width: 550, id: "mv" %>
-            <h4 class="topic-text">
-              <%= song.lyric %>
+            <h4 class="lyrics">
+              <%= song.lyrics %>
             </h4>
             <div>
               <% if !song.favorite_users.include?(current_user) %>
@@ -37,6 +38,7 @@
           </div>
         </div>
       </div>
+  
     <% end %>
   </div>
 </div>

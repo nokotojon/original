@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'songs/new'
+  get 'songs/rank'
   get 'sessions/new'
   root 'pages#index'
   

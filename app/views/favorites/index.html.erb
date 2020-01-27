@@ -7,10 +7,10 @@
             <h2 class="topic-author">
               <%= song.user.name %>
             </h2>
-             <%= video_tag song.video_url.to_s,loop: true, controls: true, width: 550, id: "mv" %>
-            <p class="topic-text">
+            <h3 class="topic-text">
               <%= song.title %>
-            </p>
+            </h3>
+             <%= video_tag song.video_url.to_s,loop: true, controls: true, width: 550, id: "mv" %>
           </div>
         </div>
       </div>
