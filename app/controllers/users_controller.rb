@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :ensure_correct_user, {only: [:edit, :update]}
+  
   def index
   @users = User.all
   end
@@ -38,6 +40,14 @@ class UsersController < ApplicationController
       render("/users/edit")
     end
   end
+  
+  def ensure_correct_user
+    if current_user.id != params[:id].to_i
+      flash[:notice] = "ユーザー編集の権限がありません。　このユーザーを編集する場合は、一度ログアウトし、このユーザーで再度ログインしてください。"
+      redirect_to users_path
+    end
+  end
+  
   
   private
   def user_params
