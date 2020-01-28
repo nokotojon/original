@@ -22,6 +22,11 @@
           <% if logged_in? %>
             <li>
               <%= link_to songs_path do %>
+                <%= image_tag "icons/newsong.jpeg" %>
+              <% end %>
+            </li>
+             <li>
+              <%= link_to songs_sort_path do %>
                 <%= image_tag "icons/video.jpeg" %>
               <% end %>
             </li>

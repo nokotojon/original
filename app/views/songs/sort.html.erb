@@ -1,0 +1,11 @@
+<div class="topic-index-wrapper">
+  <div class="container">
+    <h1 class="explation-sort">投稿を見たい月を選んでください</h1>
+      <%= form_for @user do |f| %>
+      <div class="input-date">
+        <input name="fdate" type="date" />～<input name="udate" type="date" /
+      </div>
+      <%= f.submit "この設定で動画を閲覧", class: 'btn-block btn-white btn push-create' %>
+    <% end %>
+  </div>
+</div>
