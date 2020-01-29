@@ -5,10 +5,9 @@ class CreateSongs < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :video
       t.string :lyrics
-      t.string :fdate
-      t.string :udate
 
       t.timestamps
     end
   end
 end
+

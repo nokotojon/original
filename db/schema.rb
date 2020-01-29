@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_27_141746) do
+ActiveRecord::Schema.define(version: 2020_01_25_002711) do
 
   create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
@@ -24,15 +24,6 @@ ActiveRecord::Schema.define(version: 2020_01_27_141746) do
     t.string "title"
     t.string "video"
     t.string "lyrics"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "sorts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "song_id"
-    t.string "fday"
-    t.string "uday"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

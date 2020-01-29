@@ -1,11 +1,15 @@
 <div class="topic-index-wrapper">
   <div class="container">
     <h1 class="explation-sort">投稿を見たい月を選んでください</h1>
-      <%= form_for @user do |f| %>
+      <%= form_tag (songs_sort_path, method: :post)  do %>
       <div class="input-date">
-        <input name="fdate" type="date" />～<input name="udate" type="date" /
+       <p>この日から</p>
+       <input type="date" name="start_date">
+
+       <p>この日まで</p>
+       <input type="date" name="end_date">       
       </div>
-      <%= f.submit "この設定で動画を閲覧", class: 'btn-block btn-white btn push-create' %>
+      <input type="submit" value="この設定で動画を閲覧する">
     <% end %>
   </div>
 </div>
