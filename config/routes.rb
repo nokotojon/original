@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'songs/new'
   get 'songs/rank'
   get 'songs/sort'
-  post 'songs/date'
+  post 'songs/sort'
   
   get 'sessions/new'
   root 'pages#index'

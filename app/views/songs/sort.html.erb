@@ -1,7 +1,6 @@
-<div class="topic-index-wrapper">
-  <div class="container">
-    <h1 class="explation-sort">投稿を見たい月を選んでください</h1>
-      <%= form_tag (songs_sort_path, method: :post)  do %>
+<div class="date-choice">
+    <h1 class="explation-sort">投稿を見たい日付の範囲を選んでください</h1>
+      <%= form_tag(songs_path, method: :get) do %>
       <div class="input-date">
        <p>この日から</p>
        <input type="date" name="start_date">
@@ -9,7 +8,8 @@
        <p>この日まで</p>
        <input type="date" name="end_date">       
       </div>
+      <div class = "btn-choice">
       <input type="submit" value="この設定で動画を閲覧する">
+      </div>
     <% end %>
-  </div>
 </div>

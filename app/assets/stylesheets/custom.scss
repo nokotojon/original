@@ -183,7 +183,8 @@ h2 {
     margin-top: 100px;
     border: 1px solid #e6ecf0;
     border-radius: 3px;
-    .topic-author {
+    
+  .topic-author {
       padding-right: 20px;
       padding-left: 20px;
     }
@@ -272,7 +273,17 @@ h2 {
 .lyrics{
   font-size :1000px;
 }
-
-.explation-sort{
-  padding-top: 80px;
+.date-choice {
+background-color: #fafafa;
+  text-align:center;
+    .explation-sort{
+    padding-top: 80px;
+  }
+  .btn-choice {
+  color: #565656;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.0);
+  }
 }

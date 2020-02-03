@@ -1,7 +1,10 @@
 class SongsController < ApplicationController
   def index
     @songs = Song.all.includes(:favorite_users)
-    @songs = Song.all.order(created_at: :desc)
+
+    if params[:start_date] != nil
+      @songs = Song.where(created_at: params[:start_date]..params[:end_date])
+    end
   end
   
   def rank
@@ -9,13 +12,7 @@ class SongsController < ApplicationController
   end
   
   def sort
-    @dates = Song.where(created_at: params[:start_date]..params[:end_date])
-    
-    if @dates.save
-      redirect_to songs_path, success:'設定に成功しました'
-    else
-      flash.now[:danger] = '設定に失敗しました'
-    end
+  
   end
   
   def new
