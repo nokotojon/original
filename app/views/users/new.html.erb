@@ -21,6 +21,10 @@
             <%= f.label :password_confirmation,"パスワード確認", class: 'text-white' %>
             <%= f.password_field :password_confirmation, class: 'form-control' %>
           </div>
+            <div class="form-group">
+            <%= f.label :profile,"アカウントの紹介文(任意)", class: 'text-white' %>
+            <%= f.text_area :profile, class: 'form-control' %>
+          </div>
           <%= f.label "画像をアップロード" %><br><%= f.file_field :image %>
           <%= f.submit "登録", class: 'btn-block  button user-create_account_button' %>
         <% end %>

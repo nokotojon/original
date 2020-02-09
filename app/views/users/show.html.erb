@@ -10,6 +10,7 @@
       <h2 class="user-infomation">名前: <%= @user.name %></h2>
       
       <p class="user-infomation">メールアドレス: <%= @user.email %></p>
+      <p class="user-infomation">アカウント紹介文 : <%= @user.profile %></p>
       <% if @user.id == current_user.id %>
         <%= link_to("編集", edit_user_path) %>
       <% end %>
