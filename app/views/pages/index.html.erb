@@ -1,15 +1,16 @@
+
 <div class="top-hero-wrapper text-center">
   <div class="container top-hero-container">
     <div class="row">
     <% if logged_in? %>
     <h3 class="text-white">ログイン完了です！</h3>
-        <%= link_to '動画を閲覧する', songs_path, class: 'btn new' %>
-        <%= link_to '動画を投稿する',new_song_path ,class: 'btn login' %>
+        <%= link_to '動画を閲覧する', songs_path, class: 'button create_account_button' %>
+        <%= link_to '動画を投稿する',new_song_path ,class: 'button login_button' %>
     <% else %>
     <h1 class="text-white">あなたの才能を16小節に詰め込もう！</h1>
     <h2 class="text-white">16novel はラップを気軽に投稿、鑑賞できるSNSサービスです。</h2>
-        <%= link_to 'アカウント作成はこちら', new_user_path, class: 'btn new' %>
-        <%= link_to 'ログインはこちら',login_path ,class: 'btn login' %>
+        <%= link_to 'アカウント作成はこちら', new_user_path, class: 'button create_account_button' %>
+        <%= link_to 'ログインはこちら',login_path ,class: 'button login_button' %>
         <% end %>
     </div>
   </div>

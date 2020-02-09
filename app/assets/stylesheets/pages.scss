@@ -1,3 +1,106 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.create_account_button {
+  font-size :20px;
+  background-color : #55acee;
+  position:relative;
+  top:100px;
+  right:40px;
+  box-shadow:0px 5px blue;
+}
+
+.create_account_button:active{
+  position:relative;
+  top:110px;
+  box-shadow :none;
+}
+
+.login_button {
+  font-size :20px;
+  background-color : yellow;
+  position:relative;
+  top:100px;
+  left:40px;
+  box-shadow:0px 5px white;
+}
+
+.login_button:active{
+  position:relative;
+  top:110px;
+  box-shadow :none;
+}
+.top-hero-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('home.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
+
+.top-hero-container {
+  padding-top: 220px;
+  h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+  }
+
+}
+
+.form-control {
+  height: 45px;
+}
+
+
+/* ログインページのボタン */
+.real-login{
+  padding: 10px 20px;
+  font-size :20px;
+  background-color : yellow;
+  box-shadow:0px 5px white;
+}
+.real-login:active{
+  position:relative;
+  top:10px;
+  box-shadow :none;
+}
+/*終わり */
+
+
+.navbar-transparent {
+  margin-bottom: 0px;
+  background-color: rgba(0,0,0,0.5);
+  a {
+    color: #fff !important;
+  }
+
+  .navbar-brand {
+    padding: 0px;
+    margin-top: 15px;
+  }
+
+  img {
+    height: 40px;
+  }
+}
+
+.btn-black {
+  color: #565656;
+  border: 1px solid #565656;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.0);
+
+  &:hover {
+    color: #565656;
+  }
+}
+
+
+
+
+

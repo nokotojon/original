@@ -1,289 +1,29 @@
+.explanation {
+  display:none;
+}
+
+.icon-active {
+  display:block;
+}
 h1, h2 {
   font-weight: 100;
 }
 
 h2 {
     margin-bottom: 60px;
-  }
+}
 .text-white {
   color: #fff;
 }
-.btn {
+.button {
   color :black;
   border-radius:10px;
   padding: 20px 25px;
 }
-.new {
-  font-size :20px;
-  background-color : #55acee;
-  position:relative;
-  top:100px;
-  right:40px;
-  box-shadow:0px 5px blue;
-}
 
-.new:active{
-  position:relative;
-  top:110px;
-  box-shadow :none;
-}
-
-.login {
-  font-size :20px;
-  background-color : yellow;
-  position:relative;
-  top:100px;
-  left:40px;
-  box-shadow:0px 5px white;
-}
-
-.login:active{
-  position:relative;
-  top:110px;
-  box-shadow :none;
-}
-.top-hero-wrapper {
-  width: 100vw;
-  height: 100vh;
-  background-image: url('home.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #464646;
-}
-
-.top-hero-container {
-  padding-top: 220px;
-  h1 {
-    font-size: 56px;
-    margin-bottom: 20px;
-  }
-
-}
-
-.form-control {
-  height: 45px;
-}
-
-.users-new-wrapper {
-  width: 100vw;
-  height: 100vh;
-  background-image: url('home.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #464646;
-
-  .users-new-container {
-    padding-top: 220px;
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-  }
-}
-/* アカウント作成ページのボタン */
-.push-create{
-  position:relative;
-  padding: 10px 20px;
-  font-size :20px;
-  background-color : #55acee;
-  box-shadow:0px 5px blue;
-}
-
-.push-create:active{
-  position:relative;
-  top:10px;
-  box-shadow :none;
-}
-/*終わり */
-/* ログインページのボタン */
-.real-login{
-  padding: 10px 20px;
-  font-size :20px;
-  background-color : yellow;
-  box-shadow:0px 5px white;
-}
-.real-login:active{
-  position:relative;
-  top:10px;
-  box-shadow :none;
-}
-/*終わり */
 .alert {
   margin-bottom: 0px;
   position: fixed;
   width: 100%;
   z-index: 10000;
-}
-
-.navbar-transparent {
-  margin-bottom: 0px;
-  background-color: rgba(0,0,0,0.5);
-  a {
-    color: #fff !important;
-  }
-
-  .navbar-brand {
-    padding: 0px;
-    margin-top: 15px;
-  }
-
-  img {
-    height: 40px;
-  }
-}
-
-.btn-black {
-  color: #565656;
-  border: 1px solid #565656;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-size: 20px;
-  background-color: rgba(0,0,0,0.0);
-
-  &:hover {
-    color: #565656;
-  }
-}
-/*動画投稿画面*/
-.topic-new-wrapper {
-  width: 100vw;
-  height: 100vh;
-  background-image: url('orange');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #464646;
-  padding-top: 120px;
-}
-
-.add-video{
-  padding: 10px 20px;
-  font-size :20px;
-  background-color : #00FF00;
-  box-shadow:0px 5px green;
-}
-
-.add-video:active{
-  position:relative;
-  top:10px;
-  box-shadow :none;
-}
-/*ユーザー一覧 */
-.topic-index-wrapper {
-  background-color: #fafafa;
-  .topic-index-single {
-    background-color: #fff;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 100px;
-    border: 1px solid #e6ecf0;
-    border-radius: 3px;
-    
-  .topic-author {
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-
-    .topic-text {
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-
-    img {
-      margin-top: 10px;
-      margin-bottom: 20px;
-      width: 100%;
-    }
-
-    .topic-index-icon {
-      width: 35px;
-      height: 30px;
-      margin-left: 20px;
-    }
-  }
-}
-.topic-index-wrapper{
-    text-align :center;
-}
-
-.main {
-  position:relative;
-  top :100px;
-}
-
-.image-system{
-  float: left;
-
-  width:120px;
-  height:120px;
-}
-
-.user-right {
-  position: relative;
-  top : 20px;
-  float :center;
-}
-
-.image-systemm{
-  float: center;
-
-  width:120px;
-  height:120px;
-}
-
-.topic-index-icon {
-  width: 35px;
-  height: 30px;
-  }
-  
-.rank{
-  position:relative;
-   top : 80px;
-}
-
-.one {
-  font-size:100px;
-	text-align:center;
-	line-height:0.95em;
-	font-weight:bold;
-	color: transparent;
-	background: repeating-linear-gradient(0deg, #B67B03 0.1em, #DAAF08 0.2em, #FEE9A0 0.3em, #DAAF08 0.4em, #B67B03 0.5em); 
-	-webkit-background-clip: text;
-}
-
-.two {
-  font-size:100px;
-	text-align:center;
-	line-height:0.95em;
-	font-weight:bold;
-	color: transparent;
-	background: repeating-linear-gradient(0deg, #757575 0.1em, #9E9E9E 0.2em, #E8E8E8 0.3em, #9E9E9E 0.4em, #757575 0.5em); 
-	-webkit-background-clip: text;
-}
-
-.three{
-  font-size:100px;
- color:#C47022;
-}
-.lyrics{
-  font-size :1000px;
-}
-.date-choice {
-background-color: #fafafa;
-  text-align:center;
-    .explation-sort{
-    padding-top: 80px;
-  }
-  .btn-choice {
-  color: #565656;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-size: 20px;
-  background-color: rgba(0,0,0,0.0);
-  }
 }
