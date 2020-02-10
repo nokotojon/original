@@ -1,7 +1,7 @@
 class SongsController < ApplicationController
   def index
     @songs = Song.all.includes(:favorite_users)
-
+    @songs = Song.all.order(created_at: :desc)
     if params[:start_date] != nil
       @songs = Song.where(created_at: params[:start_date]..params[:end_date])
     end
@@ -33,6 +33,6 @@ class SongsController < ApplicationController
   
   private
   def song_params
-    params.require(:song).permit(:title, :rylic, :video)
+    params.require(:song).permit(:title, :lyrics, :video)
   end
 end
