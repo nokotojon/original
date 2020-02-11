@@ -12,4 +12,5 @@ class User < ApplicationRecord
   has_many :favorite_songs, through: :favorites, source: 'song'
   mount_uploader :image, ImageUploader
   has_many :comments
+
 end

@@ -45,12 +45,17 @@
     }
   }
 }
+
 .song-user-name {
       position :relative; bottom: 100px;
 }
-.move-left {
-  position :relative; right: 700px;
+.song-topic-left {
+  position:relative; bottom: 700px;
+  .move-left {
+    position :relative; right: 650px;
+  }
 }
+
 .topic-index-wrapper{
     text-align :center;
 }

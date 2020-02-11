@@ -8,7 +8,7 @@
           <h2 class="user-author">
               <div class="image-system">
                 <% if user.image? %>
-                  <%= image_tag user.image.url %>
+                  <%= image_tag user.image.thumb.url%>
                  <% end %>
                </div>
                <div class="user-right">
