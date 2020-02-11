@@ -1,0 +1,18 @@
+<div class="comment-new-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h1 class="text-center">コメントを書いてください</h1>
+          <%= form_for @comment do |f| %>
+            <div class="form-group">
+             <%= f.hidden_field :user_id, value: @comment.user_id %>
+             <%= f.hidden_field :song_id, value: @comment.song_id %>              
+              <%= f.label :comment,"コメント" %>
+              <%= f.text_area :comment, class: 'form-control' %>
+            </div>
+            <%= f.submit '投稿', class: 'button  btn-block add-video-button' %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
