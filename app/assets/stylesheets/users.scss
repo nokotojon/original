@@ -1,66 +1,37 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-/*ユーザー一覧 */
-.user-index-wrapper {
-  text-align :center;
-  background-color: #fafafa;
-  .user-index-single {
-    background-color: #fff;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 100px;
-    border: 1px solid #e6ecf0;
-    border-radius: 3px;
+.users {
+  /*ユーザー一覧 */
+  .user-index-wrapper {
+    text-align :center;
+    background-color: #fafafa;
+    .user-index-single {
+      background-color: #fff;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-top: 100px;
+      border: 1px solid #e6ecf0;
+      border-radius: 3px;
+      .user-author {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
     
-  .user-author {
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-
-
-
-    img {
-      margin-top: 10px;
-      margin-bottom: 20px;
-      width: 100%;
-    }
-
-
-  }
-}
-
-.users-new-wrapper {
-  width: 100vw;
-  height: 100vh;
-  background-image: url('home.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #464646;
-
-  .users-new-container {
-    padding-top: 220px;
-
-    .form-group {
-      margin-bottom: 20px;
+      .image-system{
+      position:absolute;
+      bottom:30px;
+      width:130px;
+      height:130px;
+      }
+    
+      img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+      }
     }
   }
 }
+  
 
-/* アカウント作成ページのボタン */
-.user-create_account_button{
-  position:relative;
-  padding: 10px 20px;
-  font-size :20px;
-  background-color : #55acee;
-  box-shadow:0px 5px blue;
-}
-
-.user-create_account_button:active{
-  position:relative;
-  top:10px;
-  box-shadow :none;
-}
-/*終わり */

@@ -6,14 +6,14 @@
         <div class="col-md-6 col-md-offset-3">
           <div class="topic-index-single">
             <p class="topic-user-image">
-                  <% if song.user.image? %>
-                  <%= image_tag song.user.image.thumb.url %>
-                 <% end %>
-                 </p>
+                <% if song.user.image? %>
+                <%= image_tag song.user.image.thumb.url %>
+                <% end %>
             <h2 class="topic-text song-user-name">
               <%= song.user.name %>
             </h2>
-            <h3 class="topic-text">
+            </p>
+            <h3 class="topic-text song-title">
               <%= song.title %>
             </h3>
             <%= video_tag song.video_url.to_s,loop: true, controls: true, width: 550, id: "mv" %>
@@ -42,16 +42,16 @@
             </div>
           </div>
           <div class="song-topic-left">
-            <p class="topic-text move-left">
-              <%= "#{song.title}のリリック、概要を見る" %>
+            <p class="btn-text-3d move-left">
+              <%= "#{song.title}の詳細を見る" %>
               </p>
-            <p class="topic-text move-left">
+            <p class="topic-text move-left sentence">
               <%= song.lyrics %>
             </p>
-            <p class="topic-text move-left">
+            <p class="btn-text-3d move-left">
               <%= "#{song.user.name}のプロフィールを見る" %>
             </p>
-            <p class="topic-text move-left">
+            <p class="topic-text move-left sentence">
               <%= song.user.profile %>
             </p>
           </div>
@@ -61,3 +61,9 @@
     <% end %>
   </div>
 </div>
+<script>
+$(".btn-text-3d").click(
+    function(){
+      $(this).find(".sentence").addClass('click-active');
+    });
+  </script>

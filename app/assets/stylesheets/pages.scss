@@ -1,6 +1,40 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.users-new-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('home.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+
+  .users-new-container {
+    padding-top: 220px;
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/* アカウント作成ページのボタン */
+.user-create_account_button{
+  position:relative;
+  padding: 10px 20px;
+  font-size :20px;
+  background-color : #55acee;
+  box-shadow:0px 5px blue;
+}
+
+.user-create_account_button:active{
+  position:relative;
+  top:10px;
+  box-shadow :none;
+}
+
 .create_account_button {
   font-size :20px;
   background-color : #55acee;
