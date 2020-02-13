@@ -45,13 +45,13 @@
             <p class="btn-text-3d move-left">
               <%= "#{song.title}の詳細を見る" %>
               </p>
-            <p class="topic-text move-left sentence">
+            <p class="topic-text move-left sentence" id="js-show-lyrics">
               <%= song.lyrics %>
             </p>
             <p class="btn-text-3d move-left">
               <%= "#{song.user.name}のプロフィールを見る" %>
             </p>
-            <p class="topic-text move-left sentence">
+            <p class= "topic-text move-left sentence" id="js-show-profile">
               <%= song.user.profile %>
             </p>
           </div>
@@ -62,8 +62,11 @@
   </div>
 </div>
 <script>
-$(".btn-text-3d").click(
-    function(){
-      $(this).find(".sentence").addClass('click-active');
-    });
-  </script>
+  $(".btn-text-3d").on("click", function() {
+  $("#js-show-lyrics").removeClass("sentence");
+  $("#js-show-lyrics").addClass('click-active');
+
+  $("#js-show-profile").removeClass("sentence");
+  $("#js-show-profile").addClass('click-active');
+});
+</script>
