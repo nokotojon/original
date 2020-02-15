@@ -1,0 +1,44 @@
+<div class="pages-about-wrapper">
+  <h1>16novelとは、16小節限定でラップ動画を投稿できるSNSです。</h1>
+    <div class="about-topic-title">
+      <ul id="answer-list">
+        <li class="answer-list-item">
+          <p class="btn-sf-like">16小節って何？</p>
+          <p class="answer">簡単に説明すれば、動画の長さのことです。1小節が16回繰り返されると16小節になります。</p>
+          <p class="answer">1小節の説明は、こちらのサイトがわかりやすいのでご覧ください。</p>
+          <p class="answer"><a href="https://shusaku-dokugaku.com/rap-measure/" class="btn-vertical-border">1小節の説明を見る</a></p>
+
+        </li>
+        <li class="answer-list-item">
+          <p class="btn-sf-like">なぜ16小節限定なの?</p>
+          <p class="answer">気軽に投稿、鑑賞できるサービスにするためです。16小節は1分～2分で完結するため、気軽に作れますし、気軽に閲覧できます。</p>
+          <p class="answer">また、ほとんどのラップの楽曲は、16小節を「1バース」(一つの区切りのこと)と数えるため、自分の言いたいことを詰めるのに最も適切な長さと言えます。</p>
+        </li>
+
+        <li class="answer-list-item">
+          <p class="btn-sf-like">こんな人にオススメ!</p>
+          <p class="answer">〇ラップを自分でやってみたいけど、クラブに入ったり、サイファーに参加するのは怖いという人</p>
+          <p class="answer">〇自分のラップをもっといろんな人に聞いてほしい人</p>
+          <p class="answer">まずはアカウントを作成し、どんな動画が挙げられているか見てみましょう!</p>
+          <p class="answer"><%= link_to 'アカウント作成はこちら', new_user_path, class: 'btn-vertical-border' %></p>
+        </li>
+      </ul>  
+    </div>
+</div>
+<script>
+$(function() {
+  $(".answer-list-item").click(function() {
+    var $answer = $(this).find('.answer');
+    if($answer.hasClass('click-active')) {
+      $answer.removeClass('click-active');
+      
+      $answer.slideUp("slow");
+      
+    }else{
+      $answer.addClass('click-active');
+      
+      $answer.slideDown("slow");
+    }
+  });
+});
+</script>

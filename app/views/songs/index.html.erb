@@ -1,14 +1,13 @@
 <div class="topic-index-wrapper">
   <div class="container">
     <% @songs.each do |song| %>
-
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <div class="topic-index-single">
             <p class="topic-user-image">
-                <% if song.user.image? %>
-                <%= image_tag song.user.image.thumb.url %>
-                <% end %>
+            <% if song.user.image? %>
+              <%= image_tag song.user.image.thumb.url %>
+            <% end %>
             <h2 class="topic-text song-user-name">
               <%= song.user.name %>
             </h2>
@@ -28,32 +27,44 @@
                   <%= image_tag "icons/red-hert.jpeg", class: 'topic-index-icon' %>
                   <%= song.favorite_users.count %>
                 <% end %>
-              <% end %> 
-              <p>コメント欄</p>
-              <% song.comments.each do |comment| %>
-                 <p class="topic-text">
-                   <%= comment.user.name %>
-                   <%= comment.comment %>
-                 </p>
               <% end %>
               <%= link_to comments_path(song_id: song.id) do %>
                 <%= image_tag "icons/comment.jpeg", class: 'topic-index-icon' %>
               <% end %>
             </div>
           </div>
+          
           <div class="song-topic-left">
-            <p class="btn-text-3d move-left">
-              <%= "#{song.title}の詳細を見る" %>
-              </p>
-            <p class="topic-text move-left sentence" id="js-show-lyrics">
-              <%= song.lyrics %>
-            </p>
-            <p class="btn-text-3d move-left">
-              <%= "#{song.user.name}のプロフィールを見る" %>
-            </p>
-            <p class= "topic-text move-left sentence" id="js-show-profile">
-              <%= song.user.profile %>
-            </p>
+            <ul id="sentence-list">
+              <li class="sentence-list-item">
+                <p class="btn-text-3d">
+                  <%= "#{song.title}の詳細を見る" %>
+                 </p>
+                <p class="sentence">
+                  <%= song.lyrics %>
+                </p>
+              </li>
+              
+              <li class="sentence-list-item">
+                <p class="btn-text-3d">
+                  <%= "#{song.user.name}のプロフィールを見る" %>
+                </p>
+                <p class= "sentence">
+                  <%= song.user.profile %>
+                </p>
+              </li>
+
+                <li class="sentence-list-item">
+              <p class="btn-text-3d">コメント欄</p>
+              <% song.comments.each do |comment| %>
+                <p class="sentence move-left">
+                  <b><%= comment.user.name %></b>
+                  <%= comment.comment %>
+                </p>
+              <% end %>
+              </li>
+
+            </ul>
           </div>
         </div>
       </div>
@@ -62,11 +73,19 @@
   </div>
 </div>
 <script>
-  $(".btn-text-3d").on("click", function() {
-  $("#js-show-lyrics").removeClass("sentence");
-  $("#js-show-lyrics").addClass('click-active');
-
-  $("#js-show-profile").removeClass("sentence");
-  $("#js-show-profile").addClass('click-active');
+$(function() {
+  $(".sentence-list-item").click(function() {
+    var $sentence = $(this).find('.sentence');
+    if($sentence.hasClass('click-active')) {
+      $sentence.removeClass('click-active');
+      
+      $sentence.slideUp("slow");
+      
+    }else{
+      $sentence.addClass('click-active');
+      
+      $sentence.slideDown("slow");
+    }
+  });
 });
 </script>

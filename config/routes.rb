@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pages/about'
+  
   get 'songs/new'
   get 'songs/rank'
   get 'songs/sort'

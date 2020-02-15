@@ -2,10 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .users {
+    background-image: url('users.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
   /*ユーザー一覧 */
   .user-index-wrapper {
     text-align :center;
-    background-color: #fafafa;
     .user-index-single {
       background-color: #fff;
       padding-top: 20px;
@@ -32,6 +37,7 @@
       }
     }
   }
+
 }
   
 

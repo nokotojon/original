@@ -1,8 +1,14 @@
 .songs {
+   background-image: url('orange.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
   .topic-new-wrapper {
     width: 100vw;
     height: 100vh;
-    background-image: url('orange');
+    background-image: url('new-song.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -25,7 +31,7 @@
   }
   
   .topic-index-wrapper {
-    background-color: #fafafa;
+
     .topic-index-single {
       background-color: #fff;
       padding-top: 20px;
@@ -63,13 +69,17 @@
   .song-user-name {
     position :relative;
     font-size:60px;
+    font-weight:bold;
   }
   
   .song-topic-left {
-    position:relative; bottom: 900px;
-    .move-left {
+    position:relative; bottom: 670px;
     position :relative; right: 650px;
-    }
+  }
+  
+  .song-topic-right {
+    position:relative; bottom: 1490px;
+    position :relative; left: 650px;
   }
   
   .topic-index-wrapper{
@@ -96,7 +106,7 @@
      top : 80px;
   }
   
-  .one {
+  .rank-one {
     font-size:100px;
   	text-align:center;
   	line-height:0.95em;
@@ -106,7 +116,7 @@
   	-webkit-background-clip: text;
   }
   
-  .two {
+  .rank-two {
     font-size:100px;
   	text-align:center;
   	line-height:0.95em;
@@ -116,28 +126,39 @@
   	-webkit-background-clip: text;
   }
   
-  .three{
+  .rank-three{
     font-size:100px;
    color:#C47022;
   }
-}
-.btn-text-3d {
-  margin-top:300px;
+  .btn-text-3d {
+  margin-top:30px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 37px;
+  font-size: 30px;
   color: #799dec;
   text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #6182ca, 0px 2px 0px #4f6aa7, 0px 3px 0px #5470ad;
 }
-.btn-text-3d:active {
-  top: 4px;
-  text-shadow: none;
+  .btn-text-3d:active {
+    top: 4px;
+    text-shadow: none;
+  }
+  
+  .sentence {
+    display:none;
+    font-size: 15px;
+  }
+  .move-left {
+    float:left;
+  }
+  .date-choice {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    text-align :center;
+  }
+  
 }
 
-.sentence {
-  display:none;
-}
 
-.click-active {
-  display:block;
-}
+
+

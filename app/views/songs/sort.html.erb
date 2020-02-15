@@ -2,14 +2,15 @@
     <h1 class="explation-sort">投稿を見たい日付の範囲を選んでください</h1>
       <%= form_tag(songs_path, method: :get) do %>
       <div class="input-date">
-       <p>この日から</p>
+       <p>この日から
        <input type="date" name="start_date">
-
-       <p>この日まで</p>
-       <input type="date" name="end_date">       
+       この日まで
+       
+       <input type="date" name="end_date"> 
+       </p>
       </div>
       <div class = "date-choice-button">
-      <input type="submit" value="この設定で動画を閲覧する">
+      <input class="btn-square-above-look" type="submit" value="この設定で動画を閲覧する">
       </div>
     <% end %>
 </div>
