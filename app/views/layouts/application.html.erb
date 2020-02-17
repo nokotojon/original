@@ -64,7 +64,15 @@
               <% end %>
             </li>
             
-
+            <% if current_user.admin? %>
+            <li class="icon-hover">
+              <%= link_to favorites_index_path do %>
+                <%= image_tag "icons/hert.jpeg" %>
+                <p class="explanation">いいねした動画</p>
+              <% end %>
+            </li>
+            <% end %>
+            
           <% else %>
             <li class="icon-hover">
               <%= link_to new_user_path do %>
