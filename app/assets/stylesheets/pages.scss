@@ -1,221 +1,175 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.users-new-wrapper {
-  width: 100vw;
-  height: 100vh;
-  background-image: url('home.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #464646;
-
-  .users-new-container {
+.pages {
+  
+  /* アカウント作成ページのボタン */
+  .create_account_button {
+    font-size :20px;
+    font-weight: bold; 
+    background-color : #55acee;
+    position:relative;
+    top:100px;
+    right:40px;
+    box-shadow:0px 5px white;
+  }
+  
+  .create_account_button:active{
+    position:relative;
+    top:110px;
+    box-shadow :none;
+  }
+  
+  .login_button {
+    font-size :20px;
+    font-weight: bold;
+    background-color : yellow;
+    position:relative;
+    top:100px;
+    left:40px;
+    box-shadow:0px 5px white;
+  }
+  
+  .login_button:active{
+    position:relative;
+    top:110px;
+    box-shadow :none;
+  }
+  .about_button {
+    font-size :20px;
+    font-weight: bold;
+    background-color : green;
+    position:relative;
+    margin:65px;
+    top:100px;
+    left:40px;
+    box-shadow:0px 5px white;
+  }
+  
+  .about_button:active{
+    position:relative;
+    top:110px;
+    box-shadow :none;
+  }
+  .top-hero-wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('home.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+  }
+  
+  .top-hero-container {
     padding-top: 220px;
-
-    .form-group {
+    h1 {
+      font-size: 56px;
       margin-bottom: 20px;
     }
+  
   }
-}
-
-/* アカウント作成ページのボタン */
-.create_account_button {
-  font-size :20px;
-  font-weight: bold; 
-  background-color : #55acee;
-  position:relative;
-  top:100px;
-  right:40px;
-  box-shadow:0px 5px white;
-}
-
-.create_account_button:active{
-  position:relative;
-  top:110px;
-  box-shadow :none;
-}
-
-.login_button {
-  font-size :20px;
-  font-weight: bold;
-  background-color : yellow;
-  position:relative;
-  top:100px;
-  left:40px;
-  box-shadow:0px 5px white;
-}
-
-.login_button:active{
-  position:relative;
-  top:110px;
-  box-shadow :none;
-}
-.about_button {
-  font-size :20px;
-  font-weight: bold;
-  background-color : green;
-  position:relative;
-  margin:65px;
-  top:100px;
-  left:40px;
-  box-shadow:0px 5px white;
-}
-
-.about_button:active{
-  position:relative;
-  top:110px;
-  box-shadow :none;
-}
-.top-hero-wrapper {
-  width: 100vw;
-  height: 100vh;
-  background-image: url('home.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #464646;
-}
-
-.top-hero-container {
-  padding-top: 220px;
-  h1 {
-    font-size: 56px;
-    margin-bottom: 20px;
+  
+  .form-control {
+    height: 45px;
   }
-
-}
-
-.form-control {
-  height: 45px;
-}
-
-
-/* ログインページのボタン */
-.real-login{
-  padding: 10px 20px;
-  font-size :20px;
-  background-color : yellow;
-  box-shadow:0px 5px white;
-}
-.real-login:active{
-  position:relative;
-  top:10px;
-  box-shadow :none;
-}
-/*終わり */
-
-
-.navbar-transparent {
-  margin-bottom: 0px;
-  background-color: rgba(0,0,0,0.5);
-  a {
-    color: #fff !important;
-  }
-
-  .navbar-brand {
-    padding: 0px;
-    margin-top: 15px;
-  }
-
-  img {
-    height: 40px;
-  }
-}
-
-.btn-black {
-  color: #565656;
-  border: 1px solid #565656;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-size: 20px;
-  background-color: rgba(0,0,0,0.0);
-
-  &:hover {
+  
+  
+  
+  .btn-black {
     color: #565656;
-  }
-}
-
-.pages-about-wrapper{
-  width: 100vw;
-  height: 100vh;
-  background-image: url('about.png');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #464646;
-  h1 {
-    font-size:60px;
-    text-align:center;
-    padding-top:70px;
-    color:white;
+    border: 1px solid #565656;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0.0);
+  
+    &:hover {
+      color: #565656;
+    }
   }
   
-    .answer {
-    display:none;
-    font-size: 30px;
+  .pages-about-wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('about.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+    h1 {
+      font-size:60px;
+      text-align:center;
+      padding-top:70px;
+      color:white;
+    }
+    
+      .answer {
+      display:none;
+      font-size: 30px;
+    }
+    
+    .btn-sf-like {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFF;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.73);
+    padding: 0.3em 0.5em;
+    background: #00bcd4;
+    border-top: solid 3px #00a3d4;
+    border-bottom: solid 3px #00a3d4;
+    transition: .4s;
+    font-size:30px;
   }
   
-  .btn-sf-like {
-  position: relative;
-  display: inline-block;
-  font-weight: bold;
-  text-decoration: none;
-  color: #FFF;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.73);
-  padding: 0.3em 0.5em;
-  background: #00bcd4;
-  border-top: solid 3px #00a3d4;
-  border-bottom: solid 3px #00a3d4;
-  transition: .4s;
-  font-size:30px;
+  .btn-sf-like:hover {
+    text-shadow: -6px 0px 15px rgba(255, 255, 240, 0.83),
+                 6px 0px 15px rgba(255, 255, 240, 0.83);
+  }
+  .btn-vertical-border {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 5px 11px 5px 15px;
+    text-decoration: none;
+    color: #67c5ff;
+    transition: .4s;
+  }
+  
+  .btn-vertical-border:before {
+    position: absolute;
+    display: inline-block;
+    content: '';
+    width: 4px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    background:#67c5ff;
+  }
+  
+  .btn-vertical-border:after {
+    position: absolute;
+    display: inline-block;
+    content: '';
+    width: 4px;
+    height: 100%;
+    top:0;
+    left: 100%;
+    border-radius: 3px;
+    background:#67c5ff;
+  }
+  
+  .btn-vertical-border:hover:before, .btn-vertical-border:hover:after {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
 }
 
-.btn-sf-like:hover {
-  text-shadow: -6px 0px 15px rgba(255, 255, 240, 0.83),
-               6px 0px 15px rgba(255, 255, 240, 0.83);
-}
-.btn-vertical-border {
-  position: relative;
-  display: inline-block;
-  font-weight: bold;
-  padding: 5px 11px 5px 15px;
-  text-decoration: none;
-  color: #67c5ff;
-  transition: .4s;
-}
-
-.btn-vertical-border:before {
-  position: absolute;
-  display: inline-block;
-  content: '';
-  width: 4px;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border-radius: 3px;
-  background:#67c5ff;
-}
-
-.btn-vertical-border:after {
-  position: absolute;
-  display: inline-block;
-  content: '';
-  width: 4px;
-  height: 100%;
-  top:0;
-  left: 100%;
-  border-radius: 3px;
-  background:#67c5ff;
-}
-
-.btn-vertical-border:hover:before, .btn-vertical-border:hover:after {
-  -webkit-transform: rotate(10deg);
-  transform: rotate(10deg);
-}
 }
 
 

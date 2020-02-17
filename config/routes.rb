@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'rappers/index'
   get 'pages/about'
   
   get 'songs/new'

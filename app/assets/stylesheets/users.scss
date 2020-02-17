@@ -8,6 +8,40 @@
     background-attachment: fixed;
     background-size: cover;
     background-color: #464646;
+    .users-new-wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('home.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+  
+    .users-new-container {
+      padding-top: 220px;
+  
+      .form-group {
+        margin-bottom: 20px;
+      }
+    }
+ }
+   .user-create_account_button {
+    font-size :20px;
+    font-weight: bold; 
+    background-color : #55acee;
+    position:relative;
+
+    right:40px;
+    box-shadow:0px 5px white;
+  }
+  
+  .user-create_account_button:active{
+    position:relative;
+    top:10px;
+    box-shadow :none;
+  }
+
   /*ユーザー一覧 */
   .user-index-wrapper {
     text-align :center;
