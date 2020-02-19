@@ -1,16 +1,16 @@
-<div class="topic-index-wrapper">
+<div class="user-show-wrapper">
   <div class="container">
     <div class ="low">
       <h1 class ="text-center text-white">ユーザー情報</h1>
-      <div class="show-image">
+      <div class="image-system">
         <% if @user.image? %>
           <%= image_tag @user.image.url %>
         <% end %>
       </div>
-      <h2 class="user-infomation">名前: <%= @user.name %></h2>
+      <h2 class="user-infomation"><b>名前</b>: <%= @user.name %></h2>
       
-      <p class="user-infomation">メールアドレス: <%= @user.email %></p>
-      <p class="user-infomation">アカウント紹介文 : <%= @user.profile %></p>
+      <p class="user-infomation"><b>メールアドレス</b>: <%= @user.email %></p>
+      <p class="user-infomation"><b>アカウント紹介文</b> : <%= @user.profile %></p>
       <% if @user.id == current_user.id %>
         <%= link_to("編集", edit_user_path) %>
       <% end %>

@@ -1,9 +1,18 @@
-<div class="rapper-new-wrapper" >
+<div class="main users-edit">
   <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h1 class="text-center">ラッパー追加</h1>
-        <%= form_for @rapper do |f| %>
+    <div class="form-heading">ラッパー情報編集</div>
+    <div class="form users-form">
+      <div class="form-body">
+        
+        <% @rapper.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+          
+        <% end %>
+        
+        <!-- フォームの送信先を指定してください -->
+        <%= form_for @rapper, method: :put do |f| %>
           <div class="form-group">
             <%= f.label :name,"名前を入力" %>
             <%= f.text_field :name, class: 'form-control' %>
@@ -63,10 +72,8 @@
             <%= f.label :introduction,"ラッパー紹介" %>
             <%= f.text_area :introduction, class: 'form-control' %>
           </div>
-          
           <%= f.label "画像をアップロード" %><br><%= f.file_field :image %>
-          <%= f.submit '追加', class: 'button  btn-block btn-vertical-border' %>
-
+          <%= f.submit '編集', class: 'button  btn-block btn-vertical-border' %>
         <% end %>
       </div>
     </div>

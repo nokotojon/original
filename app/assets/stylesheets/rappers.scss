@@ -1,3 +1,97 @@
 // Place all the styles related to the rappers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.rappers {
+  background-image: url('rapper-index.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  .rapper-index-wrapper {
+    text-align :center;
+    .rapper-index-single {
+      background-color: #fff;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-top: 100px;
+      border: 1px solid #e6ecf0;
+      border-radius: 3px;
+      .rapper-author {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+    
+      .image-system{
+      position:absolute;
+      bottom:30px;
+      width:130px;
+      height:130px;
+      }
+    
+      img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+    }
+  }
+  .rapper-show-wrapper {
+    text-align:center;
+      .image-system{
+      width:230px;
+      height:230px;
+      }
+    
+      img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+   .flowbtn11{
+font-family:'Verdana',sans-serif;	
+border-radius:4px;
+position:relative;
+display:inline-block;
+width:90%;
+font-size:20px;
+color:#fff!important;
+text-decoration:none;
+margin-bottom:5px;
+}
+/* Twitter */
+.fl_tw1{
+background:#55acee;
+}  
+/* アイコンボタンホバー時 */
+.flowbtn11:hover span{
+-webkit-transform: rotateX(360deg);
+-ms-transform: rotateX(360deg);
+transform: rotateX(360deg);
+text-decoration:none;
+}
+/* ボタン内テキスト調整 */
+.flowbtn11 span{
+font-size:14px;	
+position:relative;
+left:8px;
+bottom:2px;
+transition:.6s;	
+display:inline-block;	
+}
+/* ulタグの内側余白を０にする */
+ul.snsbtniti2{
+padding:0!important;
+}
+/* アイコンボタンの位置調整 */
+.snsbtniti2{
+display:flex;
+flex-flow:row wrap;
+}
+/* アイコンボタン同士の余白調整 */
+.snsbtniti2 li{
+flex:0 0 48%;
+text-align:center!important;
+}
+  }
+}

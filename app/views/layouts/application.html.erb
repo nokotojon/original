@@ -6,6 +6,7 @@
   <%= csp_meta_tag %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   </head>
 
   <body class='<%= controller.controller_name %>'>
@@ -64,11 +65,19 @@
               <% end %>
             </li>
             
+            <li class="icon-hover">
+              <%= link_to rappers_index_path do %>
+                <%= image_tag "icons/rappers.jpeg" %>
+                <p class="explanation">ラッパー一覧</p>
+              <% end %>
+            </li>            
+            
+            
             <% if current_user.admin? %>
             <li class="icon-hover">
-              <%= link_to favorites_index_path do %>
-                <%= image_tag "icons/hert.jpeg" %>
-                <p class="explanation">いいねした動画</p>
+              <%= link_to rappers_new_path do %>
+                <%= image_tag "icons/rapper.jpeg" %>
+                <p class="explanation">ラッパーの追加</p>
               <% end %>
             </li>
             <% end %>

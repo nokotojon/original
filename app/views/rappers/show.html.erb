@@ -1,0 +1,32 @@
+<div class="rapper-show-wrapper">
+  <div class="container">
+    <div class ="low">
+      <h1 class ="text-center text-white">ユーザー情報</h1>
+      <div class="image-system">
+        <% if @rapper.image? %>
+          <%= image_tag @rapper.image.thumb.url %>
+        <% end %>
+      </div>
+      <h2 class="rapper-infomation">名前: <%= @rapper.name %></h2>
+      
+      <p class="rapper-infomation"><b>レペゼン:</b> <%= @rapper.represent_area %></p>
+      <p class="rapper-infomation"><b>クルー名:</b> <%= @rapper.crew %></p>
+      <p class="rapper-infomation"><b>SNSアカウント:</b> <ul class="snsbtniti2">
+<li><a  href="TwitterのプロフィールURL" class="flowbtn11 fl_tw1"
+><i class="fab fa-twitter"></i><span>Twitter</span></a></li></p>
+      <p class="rapper-infomation"><b>年齢:</b> <%= @rapper.age %></p>
+      <p class="rapper-infomation"><b>ライミングスキル:</b> <%= @rapper.rhyme %></p>
+      <p class="rapper-infomation"><b>フロウスキル:</b> <%= @rapper.flow %></p>
+      <p class="rapper-infomation"><b>内容:</b> <%= @rapper.talk %></p>
+      <p class="rapper-infomation"><b>プロップス、人気:</b> <%= @rapper.props %></p>
+      <p class="rapper-infomation"><b>総合値:</b> <%= @rapper.synthesis %></p>
+      <p class="rapper-infomation"><b>ラッパー紹介:</b> <%= @rapper.introduction %></p>
+      <% if current_user.admin? %>
+        <%= link_to("編集", edit_rapper_path) %>
+        
+        <%= link_to "削除","/rappers/#{@rapper.id}", method: :delete %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

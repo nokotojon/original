@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   get 'rappers/index'
+  get 'rappers/new'
+  
+  
   get 'pages/about'
   
   get 'songs/new'
@@ -15,8 +18,12 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
   
   put "users/:id/update" => "users#update"
+  
+  put "rappers/:id/update" => "rappers#update"
+  delete "/rappers/:id/destroy", to: "rappres#destroy"
     resources :users
     resources :songs
+    resources :rappers
     
     get 'favorites/index'
     post '/favorites', to: 'favorites#create'

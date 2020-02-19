@@ -71,6 +71,21 @@
       }
     }
   }
+  
+  .user-show-wrapper {
+    margin: 50px;
+    
+      .image-system{
+      width:130px;
+      height:130px;
+      }
+      
+      img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+  }
 
 }
   
