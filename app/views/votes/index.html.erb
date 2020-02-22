@@ -1,16 +1,16 @@
 <div class="rapper-index-wrapper">
   <div class="container">
     <h1 class="text-center text-white">ユーザー一覧</h1> 
-      <% @rappers.each do |rapper| %>
+      <% @vote_rappers.each do |rapper| %>
        <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <div class="rapper-index-single">
             <h2 class="rapper-author">
-                <div class="image-system">
-                  <% if rapper.image? %>
-                    <%= image_tag rapper.image.thumb.url%>
-                   <% end %>
-                </div>
+              <div class="image-system">
+                <% if rapper.image? %>
+                  <%= image_tag rapper.image.thumb.url%>
+                <% end %>
+              </div>
               <div class="rapper-right">
                 <%= link_to rapper.name, rapper %>
               </div>

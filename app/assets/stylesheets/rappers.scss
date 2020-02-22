@@ -37,6 +37,7 @@
     }
   }
   .rapper-show-wrapper {
+    margin: 50px;
     text-align:center;
       .image-system{
       width:230px;
@@ -48,50 +49,66 @@
         margin-bottom: 20px;
         width: 100%;
       }
-   .flowbtn11{
-font-family:'Verdana',sans-serif;	
-border-radius:4px;
-position:relative;
-display:inline-block;
-width:90%;
-font-size:20px;
-color:#fff!important;
-text-decoration:none;
-margin-bottom:5px;
+   .edit-rapper {
+     color:green;
+     margin:40px;
+   } 
+   .delete-rapper {
+     margin:40px;
+     color:red;
+   }
+.btn-top-radius {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 8px 10px 5px 10px;
+  text-decoration: none;
+  color: #FFA000;
+  background: #fff1da;
+  border-bottom: solid 4px #FFA000;
+  border-radius: 15px 15px 0 0;
+  transition: .4s;
 }
-/* Twitter */
-.fl_tw1{
-background:#55acee;
-}  
-/* アイコンボタンホバー時 */
-.flowbtn11:hover span{
--webkit-transform: rotateX(360deg);
--ms-transform: rotateX(360deg);
-transform: rotateX(360deg);
-text-decoration:none;
+
+.btn-top-radius:hover {
+  background: #ffc25c;
+  color: #FFF;
 }
-/* ボタン内テキスト調整 */
-.flowbtn11 span{
-font-size:14px;	
-position:relative;
-left:8px;
-bottom:2px;
-transition:.6s;	
-display:inline-block;	
-}
-/* ulタグの内側余白を０にする */
-ul.snsbtniti2{
-padding:0!important;
-}
-/* アイコンボタンの位置調整 */
-.snsbtniti2{
-display:flex;
-flex-flow:row wrap;
-}
-/* アイコンボタン同士の余白調整 */
-.snsbtniti2 li{
-flex:0 0 48%;
-text-align:center!important;
-}
+   
+  }
+  .rapper-index-single {
+    .rank{
+      position:relative;
+       top : 80px;
+    }
+    
+    .rank-one {
+      font-size:100px;
+    	text-align:center;
+    	line-height:0.95em;
+    	font-weight:bold;
+    	color: transparent;
+    	background: repeating-linear-gradient(0deg, #B67B03 0.1em, #DAAF08 0.2em, #FEE9A0 0.3em, #DAAF08 0.4em, #B67B03 0.5em); 
+    	-webkit-background-clip: text;
+    }
+    
+    .rank-two {
+      font-size:100px;
+    	text-align:center;
+    	line-height:0.95em;
+    	font-weight:bold;
+    	color: transparent;
+    	background: repeating-linear-gradient(0deg, #757575 0.1em, #9E9E9E 0.2em, #E8E8E8 0.3em, #9E9E9E 0.4em, #757575 0.5em); 
+    	-webkit-background-clip: text;
+    }
+    
+    .rank-three{
+      font-size:100px;
+     color:#C47022;
+    }
+    .vote-number {
+      margin-top: 50px;
+      font-size: 20px;
+    }
   }
 }

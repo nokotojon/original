@@ -1,10 +1,25 @@
 <div class="rapper-index-wrapper">
   <div class="container">
     <h1 class="text-center text-white">ユーザー一覧</h1> 
-      <% @rappers.each do |rapper| %>
+      <% @rappers.each.with_index(1) do |rapper, i| %>
        <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <div class="rapper-index-single">
+                  <% if i == 1 %>
+                  <div class ="rank-one">
+                   <%= "#{i}位" %>
+                   </div>
+                <% end %>
+                <% if i == 2 %>
+                 <div class ="rank-two">
+                   <%= "#{i}位" %>
+                   </div>  
+                <% end %>
+                <% if i == 3 %>
+                 <div class ="rank-three">
+                   <%= "#{i}位" %>
+                   </div>
+                <% end %>
             <h2 class="rapper-author">
                 <div class="image-system">
                   <% if rapper.image? %>
@@ -14,6 +29,7 @@
               <div class="rapper-right">
                 <%= link_to rapper.name, rapper %>
               </div>
+              <p class="vote-number"><b>お気に入り登録数:</b><%= rapper.vote_users.count %>
             </h2>
           </div>
         </div>

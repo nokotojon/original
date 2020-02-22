@@ -1,6 +1,10 @@
 class RappersController < ApplicationController
   def index
-    @rappers = Rapper.all
+    @rappers = Rapper.all.includes(:vote_users)
+  end
+  
+  def rank
+    @all_ranks = Rapper.find(Vote.group(:rapper_id).order('count(rapper_id) desc').pluck(:rapper_id))
   end
   
   def new
@@ -31,7 +35,8 @@ class RappersController < ApplicationController
     @rapper.furigana_name = params[:furigana_name]
     @rapper.represent_area = params[:represent_area]
     @rapper.crew = params[:crew]
-    @rapper.sns_account = params[:sns_account]
+    @rapper.twitter = params[:twitter]
+    @rapper.youtube = params[:youtube]
     @rapper.introduction = params[:introduction]
     @rapper.age = params[:age]
     @rapper.rhyme = params[:rhyme]
@@ -56,9 +61,13 @@ class RappersController < ApplicationController
     redirect_to rappers_index_path, success: '削除完了!!'
   end
   
+  def rank
+    @rappers = Rapper.find(Vote.group(:rapper_id).order('count(rapper_id) desc').limit(30).pluck(:rapper_id))
+  end
+  
   private
   def rapper_params
-    params.require(:rapper).permit(:name, :furigana_name, :represent_area, :crew, :sns_account, :introduction, :image, :vote, :age, :rhyme, :flow, :talk, :props, :synthesis)
+    params.require(:rapper).permit(:name, :furigana_name, :represent_area, :crew, :twitter, :youtube, :introduction, :image, :vote, :age, :rhyme, :flow, :talk, :props, :synthesis)
   end  
   
 

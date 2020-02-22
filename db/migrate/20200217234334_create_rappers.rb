@@ -5,7 +5,6 @@ class CreateRappers < ActiveRecord::Migration[5.2]
       t.string :furigana_name
       t.string :represent_area
       t.string :crew
-      t.string :sns_account
       t.string :introduction
       t.string :image
       

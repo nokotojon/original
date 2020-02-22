@@ -10,6 +10,8 @@ class User < ApplicationRecord
   has_many :songs
   has_many :favorites
   has_many :favorite_songs, through: :favorites, source: 'song'
+  has_many :votes
+  has_many :vote_rappers, through: :favorites, source: 'rapper'
   mount_uploader :image, ImageUploader
   has_many :comments
 

@@ -19,11 +19,16 @@ Rails.application.routes.draw do
   
   put "users/:id/update" => "users#update"
   
+  get 'rappers/rank'
   put "rappers/:id/update" => "rappers#update"
   delete "/rappers/:id/destroy", to: "rappres#destroy"
     resources :users
     resources :songs
     resources :rappers
+    
+    get 'votes/index'
+    post '/votes', to: 'votes#create'
+    delete '/votes', to: 'votes#destroy'
     
     get 'favorites/index'
     post '/favorites', to: 'favorites#create'
