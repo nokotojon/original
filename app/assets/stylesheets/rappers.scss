@@ -12,8 +12,8 @@
     text-align :center;
     .rapper-index-single {
       background-color: #fff;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding-top: 40px;
+      padding-bottom: 40px;
       margin-top: 100px;
       border: 1px solid #e6ecf0;
       border-radius: 3px;
@@ -49,31 +49,31 @@
         margin-bottom: 20px;
         width: 100%;
       }
-   .edit-rapper {
-     color:green;
-     margin:40px;
-   } 
-   .delete-rapper {
-     margin:40px;
-     color:red;
-   }
-.btn-top-radius {
-  position: relative;
-  display: inline-block;
-  font-weight: bold;
-  padding: 8px 10px 5px 10px;
-  text-decoration: none;
-  color: #FFA000;
-  background: #fff1da;
-  border-bottom: solid 4px #FFA000;
-  border-radius: 15px 15px 0 0;
-  transition: .4s;
-}
-
-.btn-top-radius:hover {
-  background: #ffc25c;
-  color: #FFF;
-}
+     .edit-rapper {
+       color:green;
+       margin:40px;
+      } 
+     .delete-rapper {
+       margin:40px;
+       color:red;
+     }
+    .btn-top-radius {
+      position: relative;
+      display: inline-block;
+      font-weight: bold;
+      padding: 8px 10px 5px 10px;
+      text-decoration: none;
+      color: #FFA000;
+      background: #fff1da;
+      border-bottom: solid 4px #FFA000;
+      border-radius: 15px 15px 0 0;
+      transition: .4s;
+    }
+    
+    .btn-top-radius:hover {
+      background: #ffc25c;
+      color: #FFF;
+    }
    
   }
   .rapper-index-single {

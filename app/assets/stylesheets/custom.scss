@@ -1,17 +1,20 @@
+/* ヘッダーのアイコン説明を隠しておく */
 .explanation {
   display:none;
 }
-
+/*  アイコンの上にマウスが乗ったら説明を表示 */
 .icon-active {
   display:block;
 }
+/*
 h1, h2 {
   font-weight: 100;
 }
 
 h2 {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 }
+*/
 .text-white {
   color: #fff;
 }

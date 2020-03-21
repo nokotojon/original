@@ -1,37 +1,49 @@
-<div class="topic-index-wrapper">
+<div class="song-index-wrapper">
   <div class="container">
     <% @songs.each do |song| %>
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
-          <div class="topic-index-single">
-            <p class="topic-user-image">
+          <div class="song-index-single">
+            <p class="song-user-image">
             <% if song.user.image? %>
               <%= image_tag song.user.image.thumb.url %>
             <% end %>
-            <h2 class="topic-text song-user-name">
+            <h2 class="song-text song-user-name">
               <%= song.user.name %>
             </h2>
             </p>
-            <h3 class="topic-text song-title">
+            <h3 class="song-text song-title">
               <%= song.title %>
             </h3>
             <%= video_tag song.video_url.to_s,loop: true, controls: true, width: 550, id: "mv" %>
             <div>
+              <b>投稿日時</b>
+              <%= song.created_at.to_s(:datetime) %>
               <% if !song.favorite_users.include?(current_user) %>
                 <%= link_to favorites_path(song_id: song.id),method: :post do %>
-                  <%= image_tag "icons/black-hert.jpg", class: 'topic-index-icon' %>
+                  <%= image_tag "icons/black-hert.jpg", class: 'song-index-icon' %>
                   <%= song.favorite_users.count %>
                 <% end %>
                 <% else %>
                   <%= link_to favorites_path(song_id: song.id),method: :delete do %>
-                  <%= image_tag "icons/red-hert.jpeg", class: 'topic-index-icon' %>
+                  <%= image_tag "icons/red-hert.jpeg", class: 'song-index-icon' %>
                   <%= song.favorite_users.count %>
                 <% end %>
               <% end %>
               <%= link_to comments_path(song_id: song.id) do %>
-                <%= image_tag "icons/comment.jpeg", class: 'topic-index-icon' %>
+                <%= image_tag "icons/comment.jpeg", class: 'song-index-icon' %>
               <% end %>
             </div>
+          </div>
+          
+          <div class="song-topic-right">
+              <p class="btn-text-3d">コメント欄</p>
+              <% song.comments.each do |comment| %>
+                <p class="comment">
+                  <b><%= comment.user.name %></b>
+                  <%= comment.comment %>
+                </p>
+              <% end %>
           </div>
           
           <div class="song-topic-left">
@@ -53,17 +65,6 @@
                   <%= song.user.profile %>
                 </p>
               </li>
-
-                <li class="sentence-list-item">
-              <p class="btn-text-3d">コメント欄</p>
-              <% song.comments.each do |comment| %>
-                <p class="sentence move-left">
-                  <b><%= comment.user.name %></b>
-                  <%= comment.comment %>
-                </p>
-              <% end %>
-              </li>
-
             </ul>
           </div>
         </div>

@@ -1,6 +1,7 @@
 class RappersController < ApplicationController
   def index
     @rappers = Rapper.all.includes(:vote_users)
+    @rappers = Rapper.order("furigana_name")
   end
   
   def rank

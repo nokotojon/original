@@ -1,6 +1,5 @@
 <div class="user-index-wrapper">
   <div class="container">
-    <h1 class="text-center text-white">ユーザー一覧</h1> 
     <% @users.each do |user| %>
      <div class="row">
       <div class="col-md-6 col-md-offset-3">
@@ -10,14 +9,14 @@
                 <% if user.image? %>
                   <%= image_tag user.image.thumb.url%>
                  <% end %>
-               </div>
-               <div class="user-right">
+              </div>
+              <div class="user-right">
                  <%= link_to user.name, user %>
-                </div>
+              </div>
           </h2>
          </div>
        </div>
     </div>
-  <%end%>
+  <% end %>
  </div>
 </div>

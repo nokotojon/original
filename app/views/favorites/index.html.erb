@@ -1,19 +1,92 @@
-<div class="topic-index-wrapper">
+<div class="song-index-wrapper">
   <div class="container">
     <% @favorite_songs.each do |song| %>
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
-          <div class="topic-index-single">
-            <h2 class="topic-author">
+          <div class="song-index-single">
+            <p class="song-user-image">
+            <% if song.user.image? %>
+              <%= image_tag song.user.image.thumb.url %>
+            <% end %>
+            <h2 class="song-text song-user-name">
               <%= song.user.name %>
             </h2>
-            <h3 class="topic-text">
+            </p>
+            <h3 class="song-text song-title">
               <%= song.title %>
             </h3>
-             <%= video_tag song.video_url.to_s,loop: true, controls: true, width: 550, id: "mv" %>
+            <%= video_tag song.video_url.to_s,loop: true, controls: true, width: 550, id: "mv" %>
+            <div>
+              <b>投稿日時</b>
+              <%= song.created_at.to_s(:datetime) %>
+              <% if !song.favorite_users.include?(current_user) %>
+                <%= link_to favorites_path(song_id: song.id),method: :post do %>
+                  <%= image_tag "icons/black-hert.jpg", class: 'song-index-icon' %>
+                  <%= song.favorite_users.count %>
+                <% end %>
+                <% else %>
+                  <%= link_to favorites_path(song_id: song.id),method: :delete do %>
+                  <%= image_tag "icons/red-hert.jpeg", class: 'song-index-icon' %>
+                  <%= song.favorite_users.count %>
+                <% end %>
+              <% end %>
+              <%= link_to comments_path(song_id: song.id) do %>
+                <%= image_tag "icons/comment.jpeg", class: 'song-index-icon' %>
+              <% end %>
+            </div>
+          </div>
+          
+          <div class="song-topic-right">
+              <p class="btn-text-3d">コメント欄</p>
+              <% song.comments.each do |comment| %>
+                <p class="comment">
+                  <b><%= comment.user.name %></b>
+                  <%= comment.comment %>
+                </p>
+              <% end %>
+          </div>
+          
+          <div class="song-topic-left">
+            <ul id="sentence-list">
+              <li class="sentence-list-item">
+                <p class="btn-text-3d">
+                  <%= "#{song.title}の詳細を見る" %>
+                 </p>
+                <p class="sentence">
+                  <%= song.lyrics %>
+                </p>
+              </li>
+              
+              <li class="sentence-list-item">
+                <p class="btn-text-3d">
+                  <%= "#{song.user.name}のプロフィールを見る" %>
+                </p>
+                <p class= "sentence">
+                  <%= song.user.profile %>
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
+  
     <% end %>
   </div>
 </div>
+<script>
+$(function() {
+  $(".sentence-list-item").click(function() {
+    var $sentence = $(this).find('.sentence');
+    if($sentence.hasClass('click-active')) {
+      $sentence.removeClass('click-active');
+      
+      $sentence.slideUp("slow");
+      
+    }else{
+      $sentence.addClass('click-active');
+      
+      $sentence.slideDown("slow");
+    }
+  });
+});
+</script>

@@ -1,11 +1,11 @@
-.songs {
+.songs,.favorites {
    background-image: url('orange.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-color: #464646;
-  .topic-new-wrapper {
+  .song-new-wrapper {
     width: 100vw;
     height: 100vh;
     background-image: url('new-song.jpg');
@@ -30,9 +30,8 @@
     box-shadow :none;
   }
   
-  .topic-index-wrapper {
-
-    .topic-index-single {
+  .song-index-wrapper {
+    .song-index-single {
       background-color: #fff;
       padding-top: 20px;
       padding-bottom: 20px;
@@ -40,7 +39,7 @@
       border: 1px solid #e6ecf0;
       border-radius: 3px;
   
-      .topic-text {
+      .song-text {
         padding-right: 20px;
         padding-left: 20px;
       }
@@ -48,7 +47,7 @@
         font-size: 45px;
       }
   
-      .topic-index-icon {
+      .song-index-icon {
         width: 35px;
         height: 30px;
         margin-left: 20px;
@@ -59,7 +58,7 @@
     margin-bottom: 20px;
     width: 100%;
     }
-    .topic-user-image {
+    .song-user-image {
       position:absolute;
       width:100px;
       height:100px;
@@ -75,14 +74,21 @@
   .song-topic-left {
     position:relative; bottom: 670px;
     position :relative; right: 650px;
+    .sentence-list-item {
+      text-align:left;
+    }
   }
   
   .song-topic-right {
-    position:relative; bottom: 1490px;
+    position:relative; bottom: 600px;
     position :relative; left: 650px;
+    
+    .comment {
+      text-align : left;
+    }
   }
   
-  .topic-index-wrapper{
+  .song-index-wrapper{
       text-align :center;
   }
   
@@ -97,7 +103,7 @@
     float :center;
   }
   
-  .topic-index-icon {
+  .song-index-icon {
     width: 35px;
     height: 30px;
   }
@@ -156,7 +162,6 @@
     margin-top: 50px;
     text-align :center;
   }
-  
 }
 
 

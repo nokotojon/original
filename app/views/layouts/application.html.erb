@@ -59,13 +59,6 @@
             </li>
 
             <li class="icon-hover">
-              <%= link_to logout_path, method: :delete do %>
-                <%= image_tag "icons/logout.jpeg" %>
-                <p class="explanation">ログアウト</p>
-              <% end %>
-            </li>
-            
-            <li class="icon-hover">
               <%= link_to rappers_index_path do %>
                 <%= image_tag "icons/rappers.jpeg" %>
                 <p class="explanation">ラッパー一覧</p>
@@ -81,6 +74,15 @@
               <% end %>
             </li>
             <% end %>
+            
+            <li class="icon-hover">
+              <%= link_to logout_path, method: :delete do %>
+                <%= image_tag "icons/logout.jpeg" %>
+                <p class="explanation">ログアウト</p>
+              <% end %>
+            </li>
+            
+
             
           <% else %>
             <li class="icon-hover">

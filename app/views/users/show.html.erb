@@ -4,7 +4,7 @@
       <h1 class ="text-center text-white">ユーザー情報</h1>
       <div class="image-system">
         <% if @user.image? %>
-          <%= image_tag @user.image.url %>
+          <%= image_tag @user.image.thumb.url %>
         <% end %>
       </div>
       <h2 class="user-infomation"><b>名前</b>: <%= @user.name %></h2>
